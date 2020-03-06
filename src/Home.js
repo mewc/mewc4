@@ -42,7 +42,6 @@ function App() {
                     <Grid item xs={2}>
                         <Tooltip title={strings.australia} className="tooltip" >
                             <div>
-
                                 🇦🇺
                             </div>
                         </Tooltip>
