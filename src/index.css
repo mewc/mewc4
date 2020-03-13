@@ -8,3 +8,32 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',    monospace;
 }
+
+.mewc-input {
+  position: absolute;
+  bottom: 0;
+}
+
+#mewc-email-input {
+  padding: 20px;
+  background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #441313;
+    outline: none;
+    color: white;
+    font-family: monospace;
+}
+
+#mewc-email-input::placeholder {
+  color: rgb(101, 51, 51)
+}
+
+#mewc-email-input:hover {
+  padding: 20px;
+  background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #221313;
+    outline: none;
+    color: white;
+    font-family: monospace;
+}

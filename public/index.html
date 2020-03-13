@@ -3,25 +3,12 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" href="favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Michael E W Carter" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+  <link rel="apple-touch-icon" href="logo192.png" />
+  <link rel="manifest" href="manifest.json" />
   <title>mewc</title>
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -39,7 +26,7 @@
       location: "australia",
       currentEmployment: "The Lumery",
       previousEmployment: [{ name: "Shping" }, { name: "Leidos" }, { name: "Bernies" }, { name: "Luxottica" }],
-      technicalSkills: [{ name: "AWS", keyTerms: ["SA", "Lambda", "DynamoDB", "Kinesis", "S3", "API Gateway",] }, { name: "Node" }, { name: "React" }, { name: "Redux" }, { name: "Javascript" }, { name: "Tag Management", keyTerms: ["Adobe Launch", "Tealium", "GTM"] }, { name: "Ansible" }, { name: "Databases" }],
+      technicalSkills: [{ name: "AWS", keyTerms: ["SA", "Developer Tools", "Lambda", "DynamoDB", "Kinesis", "S3", "API Gateway",] }, { name: "Node" }, { name: "React" }, { name: "Redux" }, { name: "Javascript" }, { name: "CDPs", keyTerms: ["Boxever", "Audience Stream", "Adobe Experience Cloud"] }, { name: "Tag Management", keyTerms: ["Adobe Launch", "Tealium iQ", "GTM"] }, { name: "Ansible" }, { name: "Databases" }],
       education: [{
         institution: "Monash University",
         certificate: "Bachelor of Information Technology and Systems",
@@ -57,6 +44,7 @@
         notes: "Management major"
       }],
       certifications: [
+        { name: "Amazon Web Services (AWS) Developer Associate Certification", link: "https://mewc-files.s3-ap-southeast-2.amazonaws.com/mewc-certified-developer-associate-certificate.pdf" },
         { name: "Tealium AudienceStream Professional Certification" },
         { name: "Tealium AudienceStream and DataAccess Advanced User Certification" },
         { name: "Tealium iQ Basic Certification" },
@@ -79,26 +67,10 @@
       ]
     })
   </script>
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ5JD57" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   <script>console.log(`
+
+
+
                                                      
     _/      _/  _/_/_/_/  _/          _/    _/_/_/   
    _/_/  _/_/  _/        _/          _/  _/          
@@ -109,8 +81,35 @@ _/      _/  _/_/_/_/      _/  _/        _/_/_/
                     
 
 
-© ${new Date().getFullYear()}     🇦🇺                            
-`, "font-family:monospace")</script>
+
+© ${new Date().getFullYear()} 🇦🇺                            
+`)</script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ5JD57" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+
+        _   _         _           _              _     
+       /\_\/\_\ _    /\ \        / /\      _   /\ \    
+      / / / / //\_\ /  \ \      / / /    / /\ /  \ \   
+     /\ \/ \ \/ / // /\ \ \    / / /    / / // /\ \ \  
+    /  \____\__/ // / /\ \_\  / / /_   / / // / /\ \ \ 
+   / /\/________// /_/_ \/_/ / /_//_/\/ / // / /  \ \_\
+  / / /\/_// / // /____/\   / _______/\/ // / /    \/_/
+ / / /    / / // /\____\/  / /  \____\  // / /         
+/ / /    / / // / /______ /_/ /\ \ /\ \// / /________  
+\/_/    / / // / /_______\\_\//_/ /_/ // / /_________\ 
+        \/_/ \/__________/    \_\/\_\/ \/____________/ 
+                                                       
+    
+    -->
+
 </body>
 
 </html>
