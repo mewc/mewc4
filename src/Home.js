@@ -49,7 +49,7 @@ function setEmailSubmitCookie(input) {
 
 function submitEmail(email) {
     const url = atob(strings.email_endpoint_base64);
-    return axios.post(url, { email }, { timeout: 3000 })
+    return axios.post(url, { email, origin: window.origin }, { timeout: 3000 })
         .then(r => {
             return r.data;
         })
