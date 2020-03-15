@@ -1,26 +1,24 @@
 import React from 'react';
 import './App.css';
-import Home from './Home'
+import Home from './Home';
+import PastProjects from './PastProjects';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 
-
+//https://reacttraining.com/react-router/web/example/custom-link
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route>
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/past-projects">
+            <PastProjects />test
           </Route>
         </Switch>
       </Router>
@@ -28,20 +26,5 @@ function App() {
   );
 }
 
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
 
 export default App;

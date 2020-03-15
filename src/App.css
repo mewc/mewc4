@@ -28,6 +28,28 @@
   color: rgb(255, 255, 255);
 }
 
+.App-link:visited {
+  color: rgb(255, 255, 255);
+}
+
+.link {
+  color: rgb(118, 83, 83);
+  font-size: 10px;
+
+}
+
+.link:visited {
+  color: rgb(118, 83, 83);
+}
+
+
+.link-button {
+ 
+  border: 2px solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

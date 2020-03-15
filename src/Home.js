@@ -2,9 +2,12 @@ import React from 'react';
 import logo from './mewc.png';
 import './App.css';
 import { GitHub, LinkedIn } from '@material-ui/icons'
-import { Grid, Tooltip } from '@material-ui/core'
+import { Grid, Tooltip, Button } from '@material-ui/core'
 import strings from './strings';
 import axios from 'axios';
+import {
+    Link
+} from "react-router-dom";
 
 console.log(strings.github);
 const emailCookieName = 'mewc-email-submit'
@@ -44,7 +47,7 @@ function enterPress(event) {
 function setEmailSubmitCookie(input) {
     var CookieDate = new Date();
     CookieDate.setFullYear(CookieDate.getFullYear() + 1);
-    document.cookie = `${emailCookieName}=${input.toString}; expires=` + CookieDate.toUTCString() + ';';
+    document.cookie = `${emailCookieName}=${btoa(input.toString())}; expires=` + CookieDate.toUTCString() + ';';
 }
 
 function submitEmail(email) {
@@ -90,7 +93,6 @@ function Home() {
                                 rel="noopener noreferrer"
                             >
                                 <React.Fragment>
-
                                     <GitHub />
                                 </React.Fragment>
                             </a>
@@ -114,6 +116,9 @@ function Home() {
                                 <LinkedIn />
                             </a>
                         </Tooltip>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Link to={`/past-projects`} className={'link'}>Past Projects</Link>
                     </Grid>
                     {getEmailInput()}
                 </Grid>
