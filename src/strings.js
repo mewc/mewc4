@@ -12,32 +12,32 @@ const general = {
 const projects = [
     {
         shortName: "TUGS",
-        link: "https://tugs.mewc.info",
+        link: "http://tugs.mewc.info",
         description: "Early vanilla react work, with node express backend"
     },
     {
         shortName: "BananaMDB",
-        link: "https://bananamdb.mewc.info",
+        link: "http://bananamdb.mewc.info",
         description: "Quick API integration test for openmbd"
     },
     {
         shortName: "Bendigo DataVis",
-        link: "https://bendigo-datavis.mewc.info",
+        link: "http://bendigo-datavis.mewc.info",
         description: "Open API aggregation and mapping in react with mui"
     },
     {
         shortName: "PortPhilip DataVis",
-        link: "https://portphilip-datavis.mewc.info",
+        link: "http://portphilip-datavis.mewc.info",
         description: "Open API aggregation and mapping in react with mui"
     },
     {
         shortName: "oimrdj",
-        link: "https://oimrdj.mewc.info",
+        link: "http://oimrdj.mewc.info",
         description: "Spotify song requester with part rooms, admins, social auth, with node express backend"
     },
     {
         shortName: "Timesheet helper",
-        link: "https://timesheethelper.mewc.info",
+        link: "http://timesheethelper.mewc.info",
         description: "When I needed to figure out exactly how much I worked in a day"
     },
 ]
