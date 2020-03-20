@@ -9,7 +9,7 @@ import {
 
 const buildProjectGrid = () => {
     return strings.projects.map(p => {
-        return (<Grid item xs={4} key={p.shortName}>
+        return (<Grid item xs={12} key={p.shortName}>
             <Tooltip title={p.description} className="tooltip">
                 <a href={p.link} className={'App-link'}>{p.shortName}</a>
             </Tooltip>
