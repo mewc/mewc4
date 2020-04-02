@@ -1,39 +1,51 @@
 body {
-  margin: 0;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',    monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #323232;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.mewc-input {
-  position: absolute;
-  bottom: 0;
+.App {
+    text-align: center;
 }
 
-#mewc-email-input {
-  padding: 20px;
-  background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #441313;
-    outline: none;
-    color: white;
-    font-family: monospace;
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
 }
 
-#mewc-email-input::placeholder {
-  color: rgb(101, 51, 51)
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-float infinite 5s ease-in-out;
+    }
 }
 
-#mewc-email-input:hover {
-  padding: 20px;
-  background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #221313;
-    outline: none;
-    color: white;
-    font-family: monospace;
+.App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+    color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
 }

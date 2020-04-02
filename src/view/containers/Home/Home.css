@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+body,
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+}
+
+.mewc-input {
+    position: absolute;
+    bottom: 0
+}
+
+#mewc-email-input {
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #441313;
+    outline: none;
+    color: #fff;
+    font-family: monospace
+}
+
+#mewc-email-input::-webkit-input-placeholder {
+    color: #653333
+}
+
+#mewc-email-input:-ms-input-placeholder {
+    color: #653333
+}
+
+#mewc-email-input::-ms-input-placeholder {
+    color: #653333
+}
+
+#mewc-email-input::placeholder {
+    color: #653333
+}
+
+#mewc-email-input:hover {
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #221313;
+    outline: none;
+    color: #fff;
+    font-family: monospace
+}
+
+.App {
+    text-align: center;
+    background-color: #381313
+}
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    padding: 1px;
+    border: 1px solid #021a40;
+    background-color: #fff
+}
+
+.App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #fff;
+    max-width: 60%;
+    margin: 0 auto
+}
+
+.App-link {
+    font-size: 20px;
+    font-weight: 700
+}
+
+.App-link,
+.App-link:visited {
+    color: #fff
+}
+
+.link {
+    font-size: 10px
+}
+
+.link,
+.link:visited {
+    color: #765353
+}
+
+.link-button {
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 10px
+}
+
+@-webkit-keyframes App-logo-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes App-logo-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+p {
+    font-size: small
+}
