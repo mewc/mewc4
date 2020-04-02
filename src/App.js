@@ -1,30 +1,32 @@
 import React from 'react';
-import './App.css';
-import Home from './Home';
-import PastProjects from './PastProjects';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { connect } from 'react-redux';
+import Router from './Router';
+import { appLoading } from './state/ducks/app/operations';
+import { SCOPES } from './assets/strings/constants';
 
-//https://reacttraining.com/react-router/web/example/custom-link
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/past-projects">
-            <PastProjects />test
-          </Route>
-        </Switch>
-      </Router>
-    </div >
-  );
+function App(props) {
+    const { loading } = props.loading;
+    return (
+        <div className="App">
+            {(loading)}
+            <Router />
+        </div >
+    );
+}
+
+function mapStateToProps(state, ownProps) {
+    return {
+        loading: (state.app.loading[SCOPES.APP] !== null)
+    };
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        appLoading: (promise) => { dispatch(appLoading(promise)) }
+    }
 }
 
 
-export default App;
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
