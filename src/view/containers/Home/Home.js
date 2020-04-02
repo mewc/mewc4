@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import './Home.css';
 import logo from '../../../assets/img/mewc.png';
 import { GitHub, LinkedIn } from '@material-ui/icons'
-import { Grid, Tooltip } from '@material-ui/core'
+// import Medium from '../../../assets/img/medium.svg'
+import { Grid, Tooltip, 
+    // SvgIcon 
+} from '@material-ui/core'
 import { GENERAL, } from '../../../assets/strings/constants';
 import axios from 'axios';
 import {
@@ -75,10 +78,10 @@ function renderHome() {
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h6>
-                    Michael Carter
+                    {GENERAL.mewc_name}
                 </h6>
                 <p>
-                    Drive data, link everything &amp; mobilise tech power-ups
+                    {GENERAL.mewc_tagline}
                 </p>
                 <Grid container
                     spacing={4}
@@ -86,6 +89,39 @@ function renderHome() {
                     justify="center"
                     alignItems="center"
                 >
+                    <Grid item xs={2}>
+                        <Tooltip title={GENERAL.linkedin} className="tooltip">
+                            <a
+                                className="App-link"
+                                href="https://linkedin.com/in/mewcmewc"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <LinkedIn />
+                            </a>
+                        </Tooltip>
+                    </Grid>
+                    {/* <Grid item xs={2}>
+                        <Tooltip title={GENERAL.medium} className="tooltip">
+                            <a
+                                className="App-link"
+                                href="https://medium.com/@mewc.dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <SvgIcon>
+                                    <Medium />
+                                </SvgIcon>
+                            </a>
+                        </Tooltip>
+                    </Grid> */}
+                    <Grid item xs={2}>
+                        <Tooltip title={GENERAL.australia} className="tooltip" >
+                            <span role="img" aria-label="australia">
+                                🇦🇺
+                            </span>
+                        </Tooltip>
+                    </Grid>
                     <Grid item xs={2}>
                         <Tooltip title={GENERAL.github} className="tooltip">
                             <a
@@ -97,25 +133,6 @@ function renderHome() {
                                 <React.Fragment>
                                     <GitHub />
                                 </React.Fragment>
-                            </a>
-                        </Tooltip>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Tooltip title={GENERAL.australia} className="tooltip" >
-                            <span role="img" aria-label="australia">
-                                🇦🇺
-                            </span>
-                        </Tooltip>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Tooltip title={GENERAL.linkedin} className="tooltip">
-                            <a
-                                className="App-link"
-                                href="https://linkedin.com/in/mewcmewc"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <LinkedIn />
                             </a>
                         </Tooltip>
                     </Grid>
