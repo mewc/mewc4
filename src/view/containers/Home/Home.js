@@ -21,11 +21,11 @@ function enterPress(event) {
     const input = element.value;
     if (event.charCode === 13 && input.match(/^[\w-.]+@([\w-]+.)+[\w-]{2,19}$/)) {
         event.preventDefault();
-        console.log(input);
+        console.debug(input);
         element.setAttribute('placeholder', 'sending...');
         element.setAttribute('disabled', true);
         element.value = null;
-        submitEmail(input) 
+        submitEmail(input)
             .then(r => {
                 if (r.status === 'done') {
                     setEmailSubmitCookie(input);
@@ -42,7 +42,7 @@ function enterPress(event) {
                 element.value = input;
             })
     } else if (event.keyCode === 13) {
-        console.log('invalid input: ' + input);
+        console.debug('invalid input: ' + input);
     }
 }
 

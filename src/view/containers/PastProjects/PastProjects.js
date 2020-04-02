@@ -1,31 +1,48 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './PastProjects.css';
-import { Grid } from '@material-ui/core'
+import { Grid, CircularProgress, Table, TableBody, TableHead, TableCell, TableContainer, TableRow, Paper } from '@material-ui/core';
 import { GENERAL } from '../../../assets/strings/constants';
 import { appLoading } from '../../../state/ducks/app/operations';
+import { getProjectData } from '../../../state/ducks/projects/operations';
 import {
     Link
 } from "react-router-dom";
 
 
-const buildProjectGrid = () => {
-    // return GENERAL.projects.map(p => {
-    //     return (<Grid item xs={12} key={p.shortname}>
-    //         <Tooltip title={p.description} className="tooltip">
-    //             <a href={p.link} className={'App-link'}>{p.shortName}</a>
-    //         </Tooltip>
-    //     </Grid>);
-    // })
+const buildProjectGrid = (data) => {
+
+    return (
+        <TableContainer component={Paper} className={'table-paper'}>
+            <Table className={'table'} aria-label="simple table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell className={'prj-outline-head'}>Project</TableCell>
+                        <TableCell className={'prj-outline-head'} align="left">Outline</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {data.map((row) => (
+                        <TableRow key={Object.values(row.shortname)[0]}>
+                            <TableCell component="th" scope="row">
+                                <a className={'prj-link'} href={Object.values(row.link)[0]}>{Object.values(row.shortname)[0]}</a>
+                            </TableCell>
+                            <TableCell className={'prj-outline'} align="left">{Object.values(row.description)[0]}</TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+        </TableContainer>
+    );
 }
 
 
 
-function PastProjects() {
+function PastProjects(props) {
+    const { projects, loading } = props;
     document.title = `mewc - Past Projects`;
-
-
-
+    console.debug('PP', (!loading && !(projects.length === 0), props));
+    if (!loading && projects.length === 0) { props.getProjectData(); }
     return (
         <div className="App">
             <header className="App-header">
@@ -37,7 +54,9 @@ function PastProjects() {
                     justify="center"
                     alignItems="center"
                 >
-                    {buildProjectGrid()}
+                    <Grid item xs={12}>
+                        {(loading && projects.length === 0) ? <CircularProgress /> : buildProjectGrid(projects)}
+                    </Grid>
                     <Grid item xs={4}>
                         <Link to={`/`} className={'link link-button'}>Back</Link>
                     </Grid>
@@ -49,14 +68,19 @@ function PastProjects() {
 
 
 function mapStateToProps(state, ownProps) {
+    const l = (Object.keys(state.app.loading).length)
+
+    console.debug(l, l > 0);
     return {
-        loading: state.app.loading
+        loading: (Object.keys(state.app.loading).length > 0),
+        projects: state.projects.items
     };
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        appLoading: (promise) => { dispatch(appLoading(promise)) }
+        appLoading: (promise) => { dispatch(appLoading(promise)) },
+        getProjectData: () => { dispatch(getProjectData()) }
     }
 }
 

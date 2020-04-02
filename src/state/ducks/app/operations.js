@@ -5,10 +5,10 @@ export const appLoading = (promise) => {
         setTimeout(() => {
             dispatch(actions.loadingStart());
             promise.then(r => {
-                console.log(r);
+                console.debug(r);
                 dispatch(actions.loadingEnd());
             }).catch(err => {
-                console.log(err);
+                console.debug(err);
                 dispatch(actions.loadingEnd())
             })
         }, 1000);
