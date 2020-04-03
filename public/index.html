@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Michael E W Carter" />
   <link rel="apple-touch-icon" href="logo192.png" />
-  <link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="./manifest.json" />
   <title>mewc</title>
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -23,10 +23,14 @@
     window.dataLayer.push({
       name: "michael carter",
       shortName: "mewc",
-      location: "australia",
+      location: {
+        town: 'RICHMOND',
+        state: 'VICTORIA',
+        country: 'AUSTRALIA'
+      },
       currentEmployment: "The Lumery",
       previousEmployment: [{ name: "Shping" }, { name: "Leidos" }, { name: "Bernies" }, { name: "Luxottica" }],
-      technicalSkills: [{ name: "AWS", keyTerms: ["SA", "Developer Tools", "Lambda", "DynamoDB", "Kinesis", "S3", "API Gateway",] }, { name: "Node" }, { name: "React" }, { name: "Redux" }, { name: "Javascript" }, { name: "CDPs", keyTerms: ["Boxever", "Audience Stream", "Adobe Experience Cloud"] }, { name: "Tag Management", keyTerms: ["Adobe Launch", "Tealium iQ", "GTM"] }, { name: "Ansible" }, { name: "Databases" }],
+      technicalSkills: [{ name: "AWS", keyTerms: ["SA", "Developer Tools", "CloudWatch", "Lambda", "DynamoDB", "Dynamo", "S3", "API Gateway",] }, { name: "Node" }, { name: "React" }, { name: "Redux" }, { name: "Javascript" }, { name: "CDPs", keyTerms: ["Boxever", "Audience Stream", "Adobe Experience Cloud"] }, { name: "Tag Management", keyTerms: ["Adobe Launch", "Tealium iQ", "GTM"] }, { name: "Ansible" }, { name: "Databases" }],
       education: [{
         institution: "Monash University",
         certificate: "Bachelor of Information Technology and Systems",

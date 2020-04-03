@@ -17,8 +17,8 @@ const buildProjectGrid = (data) => {
             <Table className={'table'} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell className={'prj-outline-head'}>Project</TableCell>
-                        <TableCell className={'prj-outline-head'} align="left">Outline</TableCell>
+                        <TableCell className={'prj-outline-head'}>{GENERAL.past_projects_tablecol_projectlinks}</TableCell>
+                        <TableCell className={'prj-outline-head'} align="left">{GENERAL.past_projects_tablecol_description}</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -44,25 +44,23 @@ function PastProjects(props) {
     console.debug('PP', (!loading && !(projects.length === 0), props));
     if (!loading && projects.length === 0) { props.getProjectData(); }
     return (
-        <div className="App">
-            <header className="App-header">
-                <h3>{GENERAL.past_projects_header}</h3>
-                <p>{GENERAL.past_projects_description}</p>
-                <Grid container
-                    spacing={4}
-                    direction="row"
-                    justify="center"
-                    alignItems="center"
-                >
-                    <Grid item xs={12}>
-                        {(loading && projects.length === 0) ? <CircularProgress /> : buildProjectGrid(projects)}
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Link to={`/`} className={'link link-button'}>Back</Link>
-                    </Grid>
+        <header className="App-header">
+            <h3>{GENERAL.past_projects_header}</h3>
+            <p>{GENERAL.past_projects_description}</p>
+            <Grid container
+                spacing={4}
+                direction="row"
+                justify="center"
+                alignItems="center"
+            >
+                <Grid item xs={12}>
+                    {(loading && projects.length === 0) ? <CircularProgress /> : buildProjectGrid(projects)}
                 </Grid>
-            </header>
-        </div >
+                <Grid item xs={4}>
+                    <Link to={`/`} className={'link link-button'}>Back</Link>
+                </Grid>
+            </Grid>
+        </header>
     );
 }
 

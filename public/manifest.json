@@ -1,6 +1,7 @@
 {
   "short_name": "mewc",
   "name": "Michael Carter",
+  "description": "Personal website for Michael E W Carter of Australia",
   "icons": [
     {
       "src": "favicon.ico",
