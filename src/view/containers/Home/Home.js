@@ -93,7 +93,7 @@ function renderHome() {
                         <Tooltip title={GENERAL.linkedin} className="tooltip">
                             <a
                                 className="App-link"
-                                href="https://linkedin.com/in/mewcmewc"
+                                href="https://linkedin.com/in/michael-carter-au"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
