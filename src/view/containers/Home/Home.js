@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Home.css';
-import logo from '../../../assets/img/mewc.png';
 import { GitHub, LinkedIn } from '@material-ui/icons'
 // import Medium from '../../../assets/img/medium.svg'
 import { Grid, Tooltip, 
@@ -15,6 +14,8 @@ import {
 import cx from 'classnames';
 import { appLoading } from '../../../state/ducks/app/operations';
 
+import pic1 from '../../../assets/img/mewc1.png';
+import pic2 from '../../../assets/img/mewc2.jpg';
 
 console.debug(GENERAL.github);
 const emailCookieName = 'mewc-email-submit';
@@ -76,7 +77,7 @@ function renderHome() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={(Date.now() % 2?pic1:pic2)} className="App-logo" alt="logo" />
                 <h6>
                     {GENERAL.mewc_name}
                 </h6>
